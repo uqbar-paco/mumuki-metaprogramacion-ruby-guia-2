@@ -1,5 +1,3 @@
-Perfecto, acabás de crear a `pepita`.
+¡Bien hecho!
 
-Miremos en detalle: con esto estamos creando un objeto (`Object.new`) y asignándolo (`=`) a una referencia (`pepita`), que nos permitirá referenciar a nuestro objeto más tarde y usarlo para cosas interesantes, como veremos luego.
-
-
+Acá vemos que gracias a `method_missing`, es fácil implementar muchos patrones de diseño sin incurrir en repeticiones. Ya veremos mas ejemplos de esto.
