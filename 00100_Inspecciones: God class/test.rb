@@ -13,7 +13,7 @@ end
 
 class Baz
   16.times do |i|
-    Bar.send(:define_method, "m#{i}") {}
+    Baz.send(:define_method, "m#{i}") {}
   end
 end
 
