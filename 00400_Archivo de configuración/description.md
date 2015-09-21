@@ -1,13 +1,9 @@
-Conozcamos primero a nuestra [golondrina](http://es.wikipedia.org/wiki/Hirundo_rustica), **Pepita**.
+En una aplicación que tiene un sistema de envío de notificaciones, podemos configurar el modo en que el usuario recibirá las mismas.
 
-Y `pepita`, además de ser una golondrina, es un objeto, que como contamos en la introducción, nos ayudará a resolver algunos problemas.
+Por ahora, este modo se especifica en un archivo de configuracion, en la propiedad `notification_mode` de la siguiente forma:
 
-`pepita`, como todo objeto, en algún momento, nace, apareciendo en el mundo de objetos. O, como nos gusta decir en el paradigma de objetos, en algún momento la tenemos que **crear**.
+* Si es `"sms"`, tenemos que instanciar un `"SmsNotificationMode"`
+* Si es `"facebook"`, tenemos que instanciar un `"FacebookNotificationMode"`
+* Si es `"email"`, tenemos que instanciar un `"EmailNotificationMode"`
+* En otro caso, tenemos que lanzar un ConfigurationError
 
-Y lo hacemos de la siguiente forma:
-
-```ruby
-pepita = Object.new
-```
-
-> ¡Probalo vos mismo! Escribí el código anterior en el editor.
