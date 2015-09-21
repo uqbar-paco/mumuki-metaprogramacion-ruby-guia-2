@@ -1,3 +1,10 @@
-¡Bien hecho!
+...Acá habria que decir algo de que Hodor podria crearse si una clase...
 
-Acá vemos que gracias a `method_missing`, es fácil implementar muchos patrones de diseño sin incurrir en repeticiones. Ya veremos mas ejemplos de esto.
+
+```ruby
+hodor = Object.new
+def hodor.method_missing(selector, *args, &block)
+  "Hodor!"
+end
+```
+
