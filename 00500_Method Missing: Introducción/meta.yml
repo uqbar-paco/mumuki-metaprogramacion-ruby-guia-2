@@ -6,3 +6,4 @@ tags:
 - nullobject
 - method_missing
 locale: es
+layout: editor_bottom
