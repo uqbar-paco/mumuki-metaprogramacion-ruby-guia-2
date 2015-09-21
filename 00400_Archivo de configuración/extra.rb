@@ -13,3 +13,4 @@ class Config
 end
 
 class ConfigurationError < StandardError
+end
