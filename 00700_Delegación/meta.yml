@@ -1,7 +1,7 @@
 ---
 tags:
-- pdep
-- pepita
+- metaprogramacion
 - objetos
-- basico
+- delegator
+- method_missing
 locale: es

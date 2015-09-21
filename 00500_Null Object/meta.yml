@@ -1,7 +1,8 @@
 ---
 tags:
-- pdep
-- pepita
+- metaprogramacion
 - objetos
 - basico
+- nullobject
+- method_missing
 locale: es

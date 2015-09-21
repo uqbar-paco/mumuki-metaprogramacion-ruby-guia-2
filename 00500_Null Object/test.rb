@@ -1,8 +1,8 @@
-describe "pepita" do
-  it('existe') do
-      expect(!!defined? pepita).to be true
-  end
-  it('es un objeto') do
-      expect(pepita.class).to be Object
-  end
+describe 'null object' do
+
+    it { expect(null.foo).to be null  }
+    it { expect(null.bar).to be null  }
+    it { expect(null.baz(3)).to be null  }
+    it { expect(null.to_s).to_not be null  }
+
 end

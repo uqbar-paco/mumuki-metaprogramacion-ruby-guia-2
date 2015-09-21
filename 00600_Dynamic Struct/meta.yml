@@ -2,7 +2,5 @@
 tags:
 - metaprogramacion
 - objetos
-- basico
-- convencion
-- const_get
+- method_missing
 locale: es

@@ -1,13 +1,29 @@
-Conozcamos primero a nuestra [golondrina](http://es.wikipedia.org/wiki/Hirundo_rustica), **Pepita**.
+En ruby no existe a nivel lenguaje ninguna forma de declarar un método abstracto: al igual que en Smalltak, simplemente no se codifica el método.
 
-Y `pepita`, además de ser una golondrina, es un objeto, que como contamos en la introducción, nos ayudará a resolver algunos problemas.
-
-`pepita`, como todo objeto, en algún momento, nace, apareciendo en el mundo de objetos. O, como nos gusta decir en el paradigma de objetos, en algún momento la tenemos que **crear**.
-
-Y lo hacemos de la siguiente forma:
+El problema de esto es que, si nos olvidamos de codificar el método, los mensajes de error pueden ser un poco confusos - obtendremos NoMethodError en algún punto - por lo que muchos hacen lo siguiente:
 
 ```ruby
-pepita = Object.new
+class Mercaderia
+  def precio(cantidad)
+    precio_base(cantidad) * procedencia.taza_importacion
+  end
+
+  def precio_base(cantidad)
+    raise "should implement"
+  end
+end
 ```
 
-> ¡Probalo vos mismo! Escribí el código anterior en el editor.
+Nos gustaría poder abstraer este patrón e implementar el código anterior de la siguiente forma, preserva su semántica:
+
+```ruby
+class Mercaderia
+  def precio(cantidad)
+    precio_base(cantidad) * procedencia.taza_importacion
+  end
+
+  abstract_def :precio_base
+end
+```
+
+> Implementá `abstract_def` en donde lo consideres más apropiado.

@@ -7,13 +7,13 @@ end
 
 class Bar
   14.times do |i|
-    Bar.send :define_method, "m#{i}"
+    Bar.send(:define_method, "m#{i}"){}
   end
 end
 
 class Baz
-  15.times do |i|
-    Bar.send :define_method, "m#{i}"
+  16.times do |i|
+    Bar.send(:define_method, "m#{i}") {}
   end
 end
 

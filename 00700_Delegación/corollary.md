@@ -1,5 +1,6 @@
-Perfecto, acabás de crear a `pepita`.
+¡Bien hecho!
 
-Miremos en detalle: con esto estamos creando un objeto (`Object.new`) y asignándolo (`=`) a una referencia (`pepita`), que nos permitirá referenciar a nuestro objeto más tarde y usarlo para cosas interesantes, como veremos luego.
+Dado que esta es una idea bastante común, en Ruby ya contamos con dos componentes que implementan estas ideas:
 
-
+* [Delegator](http://ruby-doc.org/stdlib-2.1.0/libdoc/delegate/rdoc/Delegator.html)
+* [SimpleDelegator](http://ruby-doc.org/stdlib-2.1.0/libdoc/delegate/rdoc/SimpleDelegator.html)

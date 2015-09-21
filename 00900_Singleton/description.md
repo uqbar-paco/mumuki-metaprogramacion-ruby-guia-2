@@ -1,13 +1,13 @@
-Conozcamos primero a nuestra [golondrina](http://es.wikipedia.org/wiki/Hirundo_rustica), **Pepita**.
+Allow any class to understand a `singletonize` message, which adds to it a `instance` method, which returns always the same instance of the class.
 
-Y `pepita`, además de ser una golondrina, es un objeto, que como contamos en la introducción, nos ayudará a resolver algunos problemas.
-
-`pepita`, como todo objeto, en algún momento, nace, apareciendo en el mundo de objetos. O, como nos gusta decir en el paradigma de objetos, en algún momento la tenemos que **crear**.
-
-Y lo hacemos de la siguiente forma:
+Example
 
 ```ruby
-pepita = Object.new
-```
+class Foo
+  singletonize
 
-> ¡Probalo vos mismo! Escribí el código anterior en el editor.
+  #... rest of definitions
+end
+
+Foo.instance == Foo.instance #should be true
+```

@@ -1,7 +1,8 @@
 ---
 tags:
-- pdep
-- pepita
+- metaprogramacion
 - objetos
 - basico
+- inspeccion
+- instance_methods
 locale: es

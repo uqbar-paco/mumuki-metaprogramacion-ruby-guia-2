@@ -18,3 +18,6 @@ un_diccionario.z = 5
 un_struct.z #5
 #etc
 ```
+
+
+> Desarrollar `DynamicStruct` utilizando las herramientas vistas hasta ahora.

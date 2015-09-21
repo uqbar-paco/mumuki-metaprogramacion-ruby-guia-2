@@ -1,13 +1,46 @@
-Conozcamos primero a nuestra [golondrina](http://es.wikipedia.org/wiki/Hirundo_rustica), **Pepita**.
+En una aplicación, tenemos varias clases con métodos transaccionales del siguiente estilo:
 
-Y `pepita`, además de ser una golondrina, es un objeto, que como contamos en la introducción, nos ayudará a resolver algunos problemas.
-
-`pepita`, como todo objeto, en algún momento, nace, apareciendo en el mundo de objetos. O, como nos gusta decir en el paradigma de objetos, en algún momento la tenemos que **crear**.
-
-Y lo hacemos de la siguiente forma:
 
 ```ruby
-pepita = Object.new
+class CuentaCorriente < TransactionalObject
+  def transferir(monto, otra_cuenta)
+    transaction = begin_transaction!
+
+    self.extraer(monto)
+    otra_cuenta.depositar(monto)
+
+    transaction.commit!
+  rescue
+    transaction.rollback!
+  end
+
+  def extraer(monto)
+    transaction = begin_transaction!
+    #..etc..
+    transaction.commit!
+  rescue
+    transaction.rollback!
+  end
+  #..etc..
+end
 ```
 
-> ¡Probalo vos mismo! Escribí el código anterior en el editor.
+Nos gustaría eliminar estas duplicaciones y poder escribir nuestros métodos transaccionales así:
+
+```ruby
+class CuentaCorriente < TransactionalObject
+  transactional :transferir do |monto, otra_cuenta|
+    self.extraer(monto)
+    otra_cuenta.depositar(monto)
+  end
+
+  transactional :extraer do |monto|
+    #..etc..
+  end
+
+  #..etc..
+
+end
+```
+
+> Implementar lo necesario para que se pueda declarar métodos transaccionales de la forma propuesta. Considerar que el método `begin_transaction` está definido en `TransactionalObject`
