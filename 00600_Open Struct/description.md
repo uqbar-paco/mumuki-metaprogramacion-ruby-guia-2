@@ -1,13 +1,20 @@
-Conozcamos primero a nuestra [golondrina](http://es.wikipedia.org/wiki/Hirundo_rustica), **Pepita**.
-
-Y `pepita`, además de ser una golondrina, es un objeto, que como contamos en la introducción, nos ayudará a resolver algunos problemas.
-
-`pepita`, como todo objeto, en algún momento, nace, apareciendo en el mundo de objetos. O, como nos gusta decir en el paradigma de objetos, en algún momento la tenemos que **crear**.
-
-Y lo hacemos de la siguiente forma:
+Queremos definir una clase `DynamicStruct`, que, a partir de un diccionario (`Hash`), poder construir objetos que tengan un accessor para cada entrada. Por ejemplo:
 
 ```ruby
-pepita = Object.new
+un_diccionario = {x: 4, z: "foo"}
+un_struct = DynamicStruct.new(un_diccionario)
+
+un_struct.x #4
+un_struct.y = "bar"
+un_struct.z #nil
+#etc
 ```
 
-> ¡Probalo vos mismo! Escribí el código anterior en el editor.
+Además tenemos que garantizar que si los valores de las entradas de `un_diccionario` cambian, o nuevas entradas son añadidas o quitadas, estos cambios también tienen que verse reflejados en un_struct, y viceversa. Ejemplo:
+
+```ruby
+un_diccionario.z = 5
+
+un_struct.z #5
+#etc
+```

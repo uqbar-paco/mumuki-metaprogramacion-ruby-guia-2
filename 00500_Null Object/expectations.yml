@@ -1,4 +1,4 @@
 ---
 expectations:
-- binding: pepita
+- binding: 'null'
   inspection: HasBinding

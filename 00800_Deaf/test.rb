@@ -1,8 +1,29 @@
-describe "pepita" do
-  it('existe') do
-      expect(!!defined? pepita).to be true
+class FooBar
+end
+
+module AModule
+end
+
+
+describe "DeafMethod" do
+
+  it "should be possible to call deaf  within a class" do
+     FooBar.class_eval { deaf :foo  }
   end
-  it('es un objeto') do
-      expect(pepita.class).to be Object
+
+  it "should be possible to call deaf  within a module" do
+     AModule.module_eval { deaf :foo  }
   end
+
+  it "deaf define instance methods" do
+     FooBar.class_eval { deaf :bar  }
+     FooBar.new.respond_to? :bar
+  end
+
+  it "deaf methods return nil" do
+     FooBar.class_eval { deaf :foobar  }
+     expect(FooBar.new.foobar).to be nil
+  end
+
+
 end
