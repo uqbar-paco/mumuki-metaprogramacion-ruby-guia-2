@@ -1,7 +1,6 @@
 ---
 tags:
-- pdep
-- pepita
 - objetos
-- basico
+- metaprogramacion
+- mixins
 locale: es

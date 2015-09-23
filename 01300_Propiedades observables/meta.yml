@@ -1,7 +1,11 @@
 ---
 tags:
-- pdep
-- pepita
 - objetos
-- basico
+- metaprogramacion
+- mixins
+- extend
+- include
+- macros
+- define_method
+- interpolacion
 locale: es

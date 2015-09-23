@@ -1,7 +1,8 @@
 ---
 tags:
-- pdep
-- pepita
+- metaprogramacion
+- macros
+- excepciones
+- define_method
 - objetos
-- basico
 locale: es

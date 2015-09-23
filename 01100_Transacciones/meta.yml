@@ -1,8 +1,7 @@
 ---
 tags:
-- pdep
-- pepita
+- macros
 - objetos
-- basico
+- metaprogramacion
 locale: es
 layout: editor_bottom
