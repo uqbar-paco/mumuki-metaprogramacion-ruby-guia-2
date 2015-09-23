@@ -5,7 +5,7 @@ El problema de esto es que, si nos olvidamos de codificar el método, los mensaj
 ```ruby
 class Mercaderia
   def precio(cantidad)
-    precio_base(cantidad) * procedencia.taza_importacion
+    precio_base(cantidad) * procedencia.tasa_importacion
   end
 
   def precio_base(cantidad)
@@ -19,7 +19,7 @@ Nos gustaría poder abstraer este patrón e implementar el código anterior de l
 ```ruby
 class Mercaderia
   def precio(cantidad)
-    precio_base(cantidad) * procedencia.taza_importacion
+    precio_base(cantidad) * procedencia.tasa_importacion
   end
 
   abstract_def :precio_base
