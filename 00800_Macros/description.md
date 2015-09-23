@@ -20,11 +20,13 @@ La realidad es que no son construcciones especiales, sino simplemente mensajes q
 
 Ahora bien, ¿quien es `self`?
 
-> Probá siguiente código en la consola y averigualo:
+> Probá siguiente código en la consola y averigualo (si no entendés que es lo que estamos haciendo acá, mirá la ayuda):
 
 ```ruby
 class Arco
   self
 end
 ```
+
+
 
