@@ -1,0 +1,1 @@
+Acá vas a necesitar agregar también métodos de clase cuando incluyas a `Observable`. Ver [este blog post](http://www.dan-manges.com/blog/27)

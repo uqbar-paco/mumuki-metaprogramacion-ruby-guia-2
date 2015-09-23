@@ -1,6 +1,6 @@
 Capaz recuerdes que la última linea de un método su retorno. Por ejemplo:
 
-```
+```ruby
 def x.foo
   4
 end

@@ -1,13 +1,16 @@
-Conozcamos primero a nuestra [golondrina](http://es.wikipedia.org/wiki/Hirundo_rustica), **Pepita**.
-
-Y `pepita`, además de ser una golondrina, es un objeto, que como contamos en la introducción, nos ayudará a resolver algunos problemas.
-
-`pepita`, como todo objeto, en algún momento, nace, apareciendo en el mundo de objetos. O, como nos gusta decir en el paradigma de objetos, en algún momento la tenemos que **crear**.
-
-Y lo hacemos de la siguiente forma:
+Ahora queremos _extender_ la solución anterior para que nos de properties observables:
 
 ```ruby
-pepita = Object.new
+class TextBox
+  include Observable
+
+  attr_observable :label, :content
+end
+
+a_text_box = TextBox.new
+a_text_box.register_observer! an_observer
+a_text_box.label = "Age"
+# actualiza al atributo @label, y notifica a todos los observadores con on_label_changed(old_value, new_value)
 ```
 
-> ¡Probalo vos mismo! Escribí el código anterior en el editor.
+> Agregar al mixin Observable lo necesario para resolver el requerimiento.

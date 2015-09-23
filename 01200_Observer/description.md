@@ -1,13 +1,23 @@
-Conozcamos primero a nuestra [golondrina](http://es.wikipedia.org/wiki/Hirundo_rustica), **Pepita**.
+Escribir un observer a mano es una tarea bastante tediosa. Queremos implementar un mixin Observable que:
 
-Y `pepita`, además de ser una golondrina, es un objeto, que como contamos en la introducción, nos ayudará a resolver algunos problemas.
+* Permita agregar y quitar observadores mediante `register_observer!` y `unregister_observer!`
+* Provea un mensajes de la forma `fire_xyz!`, que no notifique a cada observador con un mensaje de la forma `on_xyz`.
 
-`pepita`, como todo objeto, en algún momento, nace, apareciendo en el mundo de objetos. O, como nos gusta decir en el paradigma de objetos, en algún momento la tenemos que **crear**.
-
-Y lo hacemos de la siguiente forma:
+Ejemplo:
 
 ```ruby
-pepita = Object.new
-```
+class PilaObservable
+  include Observable
 
-> ¡Probalo vos mismo! Escribí el código anterior en el editor.
+  def agregar_elemento(elemento)
+    ....
+    fire_elemento_agregado!(elemento)
+  end
+end
+
+
+pila = PilaObservable.new
+pila.register_observer! un_observer
+pila.agregar_elemento! 4
+# agrega el elemento y a cada observer le envía on_elemento_agregado(4)
+```
