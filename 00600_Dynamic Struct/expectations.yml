@@ -1,4 +1,4 @@
 ---
 expectations:
-- binding: pepita
+- binding: DynamicStruct
   inspection: HasBinding

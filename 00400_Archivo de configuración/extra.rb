@@ -3,7 +3,7 @@
   Kernel.const_set("#{it}NotificationMode", c)
 end
 
-class Config
+class Configuration
   def initialize(values)
     @values = values
   end

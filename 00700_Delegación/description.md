@@ -13,3 +13,15 @@ class X
   #..etc..
 end
 ```
+
+Escribir esto es bastante engorroso: por cada mensaje de `@c`, vamos a terminar declarando un método en `X` que sólo delegue.
+
+> Implementar lo necesario que sea posible escribir el código anterior de la siguiente forma:
+
+```ruby
+class X < Forwarder
+  def forward_to
+    @c
+  end
+end
+```
