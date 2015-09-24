@@ -1,8 +1,9 @@
-describe "pepita" do
-  it('existe') do
-      expect(!!defined? pepita).to be true
+describe "Metodo Abstracto" do
+  class Foo
+    abstract_def :foo
   end
-  it('es un objeto') do
-      expect(pepita.class).to be Object
+
+  it "si no se implementa un método abstracto, al enviar el mensaje, falla" do
+    expect { Foo.new.foo }.to raise_error StandardError
   end
 end
