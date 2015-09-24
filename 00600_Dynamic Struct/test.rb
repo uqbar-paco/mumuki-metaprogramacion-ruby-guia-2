@@ -1,8 +1,8 @@
 describe "DynamicStruct" do
   let(:empty) { DynamicStruct.new({}) }
   let(:position) { DynamicStruct.new({x: 2, y:3}) }
-  let(:h) { {} }
-  let(:dynamic) { DynamicStruct.new(h)}
+  let!(:h) { {} }
+  let!(:dynamic) { DynamicStruct.new(h)}
 
   it "DynamicStruct.new({}).foo == nil" do
     expect(empty.foo).to be nil
