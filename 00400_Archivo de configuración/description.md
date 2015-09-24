@@ -9,5 +9,6 @@ Por ahora, este modo se especifica en un archivo de configuracion, en la propied
 
 Ya contamos con una clase `Configuration` que define un método `read`, que toma la propiedad de configuración a leer y devuelve su valor como string.
 
-> Agregar a la clase `Configuration` un método `read_notification_mode`, que lea la propiedad `:notification_mode` la convierta según la lógica detallada antes.
+> Agregar a la clase `Configuration` un método `read_notification_mode`, que empleado el mensaje `read`, lea la propiedad `:notification_mode`, y la convierta según la lógica detallada antes.
+> Asumir que los strings entienden un mensaje `titlecase`
 

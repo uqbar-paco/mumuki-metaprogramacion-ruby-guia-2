@@ -14,3 +14,13 @@ end
 
 class ConfigurationError < StandardError
 end
+
+class String
+  def titlecase
+    if empty?
+      ""
+    else
+      self[0].upcase + self[1..-1]
+    end
+  end
+end
