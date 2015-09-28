@@ -26,4 +26,4 @@ class Mercaderia
 end
 ```
 
-> Implementá `abstract_def` en donde lo consideres más apropiado.
+> Implementá el macro `abstract_def` en donde lo consideres más apropiado.
