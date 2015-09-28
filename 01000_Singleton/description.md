@@ -1,13 +1,16 @@
-Allow any class to understand a `singletonize` message, which adds to it a `instance` method, which returns always the same instance of the class.
+Ahora queremos definir un macro `singletonize` que permite convertir a una clase en [Singleton](https://sourcemaking.com/design_patterns/singleton).
 
-Example
+`singletonize` debe hacer esto agregando un método de clase `instance`, que retornará siempre una misma instancia de dicha clase. Por ejemplo:
+
 
 ```ruby
 class Foo
   singletonize
 
-  #... rest of definitions
+  #... etc...
 end
 
-Foo.instance == Foo.instance #should be true
+Foo.instance == Foo.instance #debería ser true
 ```
+
+> Implementá el macro `singletonize`. Tené en cuenta que sólo tiene sentido para las clases (y no para los módulos).

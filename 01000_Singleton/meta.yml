@@ -1,7 +1,8 @@
 ---
 tags:
-- pdep
-- pepita
+- metaprogramacion
+- macros
+- define_method
 - objetos
-- basico
+- singleton
 locale: es
