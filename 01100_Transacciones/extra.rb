@@ -1,4 +1,4 @@
-module TransactionalObject
+class TransactionalObject
   def begin_transaction!
     Transaction
   end

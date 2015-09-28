@@ -21,3 +21,5 @@ pila.register_observer! un_observer
 pila.agregar_elemento! 4
 # agrega el elemento y a cada observer le envía on_elemento_agregado(4)
 ```
+
+> Implementá el mixin `Observable`
