@@ -7,8 +7,13 @@ Por ahora, este modo se especifica en un archivo de configuracion, en la propied
 * Si es `"email"`, tenemos que instanciar un `EmailNotificationMode`
 * En otro caso, tenemos que lanzar un ConfigurationError
 
-Ya contamos con una clase `Configuration` que define un método `read`, que toma la propiedad de configuración a leer y devuelve su valor como string.
+Ya contamos con una clase `Configuration` que se encarga de _parsear_ el archivo, y define un método `read`, que toma por parámetro la propiedad de configuración a leer y devuelve su valor como string. Ejemplo:
+
+```ruby
+configuration.read :notification_mode
+"sms"
+```
 
 > Agregar a la clase `Configuration` un método `read_notification_mode`, que empleado el mensaje `read`, lea la propiedad `:notification_mode`, y la convierta según la lógica detallada antes.
-> Asumir que los strings entienden un mensaje `titlecase`
+> Asumir que los strings entienden un mensaje `titlecase`, que convierte su primera letra en mayúscula.
 
