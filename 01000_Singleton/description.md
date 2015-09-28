@@ -13,4 +13,4 @@ end
 Foo.instance == Foo.instance #debería ser true
 ```
 
-> Implementá el macro `singletonize`. Tené en cuenta que sólo tiene sentido para las clases (y no para los módulos).
+> Implementá el macro `singletonize`. Tené en cuenta que sólo tiene sentido para las clases (y no para los módulos). Intentá resolverlo utilizando `define_singleton_method`.
