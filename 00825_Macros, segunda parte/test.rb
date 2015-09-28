@@ -14,12 +14,10 @@ describe "ensure_no_override" do
       end
     end
     class Foo; ensure_no_override :bar; end
-    expect(Foo.respond_to? :bar).to be tue
   end
 
   it "no falla si la clase no existia" do
     class Bar; ensure_no_override :bar; end
-    expect(Foo.respond_to? :bar).to be true
   end
 
   it "lo entienden los modulos" do
