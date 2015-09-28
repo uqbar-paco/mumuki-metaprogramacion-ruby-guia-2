@@ -3,5 +3,7 @@ tags:
 - macros
 - objetos
 - metaprogramacion
+- mixins
+- macros
 locale: es
 layout: editor_bottom
