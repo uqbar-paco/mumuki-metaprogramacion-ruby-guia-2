@@ -1,13 +1,16 @@
-We want to be able to define methods using a ```deaf``` keyword instead of ```def```. Such methods do not have any body, since their implementation is empty, and take no arguments.
+Queremos poder definir métodos usando una nueva palabra reservada: `deaf` (en lugar de `def`). Los métodos así definidos:
 
-For example:
+  * No toman parámetros
+  * Tienen una implementación vacía
+
+Por ejemplo:
 
 ```ruby
 class Foo
   deaf :foo
 end
 ```
-should be equivalent to:
+debería ser equivalente a:
 
 ```ruby
 class Foo
@@ -15,3 +18,5 @@ class Foo
   end
 end
 ```
+
+> Definir el macro `deaf`en dónde lo consideres más apropiado.
