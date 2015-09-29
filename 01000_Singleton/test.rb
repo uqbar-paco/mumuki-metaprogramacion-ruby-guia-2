@@ -1,5 +1,8 @@
 class MyClass
-    singletonize
+    begin
+        singletonize
+    rescue => e
+    end
 end
 
 describe "singletonize" do
