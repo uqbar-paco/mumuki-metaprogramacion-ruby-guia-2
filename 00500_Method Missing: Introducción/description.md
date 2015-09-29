@@ -24,7 +24,7 @@ hodor = Hodor.new
 hodor.estas_ahi?
 #=> Hodor!
 hodor.rescatar_a! bran
-Hodor!
+#=> Hodor! Hodor!
 ```
 
 > En realidad Hodor dice tantas veces "Hodor!" como argumentos tenga el mensaje, más uno. Modificar la clase `Hodor` para que refleje esto.
