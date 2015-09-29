@@ -16,5 +16,10 @@ Como es de esperar, esto también aplica a la herencia y a los mixins: si un mix
 
 ¡Y así es como surgen los **macros** `attr_accesor`, `include`, etc!
 
-> Veamos si se entiende: definí el macro `ensure_no_override` que toma un selector y lanza una excepción si ya existe este método. Definilo en la clase `Module` así tanto las clases como los métodos lo pueden aprovechar.
+> Veamos si se entiende: definí el macro `ensure_no_override` que toma un selector y lanza una excepción si ya existe este método. Definilo en la clase `Module` así tanto las clases como los métodos lo pueden aprovechar. Ejemplo:
 
+```ruby
+class Pepita
+    ensure_no_override :volar
+end
+```
