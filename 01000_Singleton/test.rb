@@ -7,7 +7,7 @@ end
 
 describe "singletonize" do
     it "las clases entienden singletonize" do
-      expect(Class.respond_to? :singletonize)
+      expect(Object.respond_to? :singletonize)
     end
     it "si una clase fue singletonizada, entiende instance" do
       expect(MyClass.respond_to? :instance)
