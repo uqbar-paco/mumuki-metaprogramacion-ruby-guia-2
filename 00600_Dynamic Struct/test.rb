@@ -24,13 +24,13 @@ describe "DynamicStruct" do
     expect(position.y).to be 3
   end
 
-  it "Si el diccionario cambia, también cambia el dynamic_struct" do
+  it "Si el diccionario cambia, tambien cambia el dynamic_struct" do
     expect(dynamic.baz).to be nil
     h[:baz] = "ok"
     expect(dynamic.baz).to eq "ok"
   end
 
-  it "Si el dynamic_struct cambia, también cambia el diccionario" do
+  it "Si el dynamic_struct cambia, tambien cambia el diccionario" do
     dynamic.baz = "ack"
     expect(h[:baz]).to eq "ack"
   end
