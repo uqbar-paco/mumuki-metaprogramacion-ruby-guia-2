@@ -10,7 +10,7 @@ describe "Inspections" do
       expect(inspector.common_type([])).to eq([])
     end
 
-    it "common_type([3, 4, 6]) incluye todos los métodos de los números" do
+    it "common_type([3, 4, 6]) incluye todos los metodos de los numeros" do
      expect(inspector.common_type([3, 4, 6])).to eq(4.methods)
     end
 
