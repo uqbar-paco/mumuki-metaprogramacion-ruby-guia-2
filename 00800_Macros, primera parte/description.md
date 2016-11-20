@@ -18,7 +18,7 @@ end
 
 La realidad es que no son construcciones especiales, sino simplemente mensajes que le están siendo enviados a un objeto: `self`, que es el receptor implícito cuando enviamos mensajes.
 
-Ahora bien, ¿quien es `self`?
+Ahora bien, ¿quién es `self`?
 
 > Probá siguiente código en la consola y averigualo (si no entendés que es lo que estamos haciendo acá, mirá la ayuda):
 

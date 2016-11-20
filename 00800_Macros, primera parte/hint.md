@@ -1,4 +1,4 @@
-Capaz recuerdes que la última linea de un método su retorno. Por ejemplo:
+Capaz recuerdes que la última linea de un método es su retorno. Por ejemplo:
 
 ```ruby
 def x.foo
