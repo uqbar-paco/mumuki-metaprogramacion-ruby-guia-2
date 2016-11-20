@@ -4,9 +4,10 @@ Queremos definir una clase `DynamicStruct`, que, a partir de un diccionario (`Ha
 un_diccionario = {x: 4, z: "foo"}
 un_struct = DynamicStruct.new(un_diccionario)
 
-un_struct.x #4
+un_struct.x # 4
 un_struct.y = "bar"
-un_struct.z #nil
+un_struct.m # nil
+un_struct.y # "bar"
 #etc
 ```
 
